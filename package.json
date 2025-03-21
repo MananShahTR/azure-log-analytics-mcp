@@ -1,0 +1,22 @@
+{
+  "name": "azure-log-analytics-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for querying Azure Log Analytics using natural language",
+  "main": "build/mcp-server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/mcp-server.js', '755')\"",
+    "start": "node build/mcp-server.js",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@azure/identity": "^3.2.0",
+    "@azure/monitor-query": "^1.1.1",
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "axios": "^1.4.0",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0"
+  }
+}
